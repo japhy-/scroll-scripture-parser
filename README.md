@@ -8,7 +8,7 @@ npm i scroll-scripture-parser
 ```
 
 ## Usage
-```
+```javascript
 const scripture = require('scroll-scripture-parser');
 
 let references = scripture.parseScripture('John 1:1-14; 6');
