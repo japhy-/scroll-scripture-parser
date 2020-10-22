@@ -81,11 +81,11 @@ const parseScripture = (input) => {
         }
     }
 
-    return { references: parts.map((p) => new ScriptureReference (p)), error: rx.lastIndex < len };
+    return parts.map((p) => new ScriptureReference (p));
 };
 
 const normalizeScripture = (references) => {
-    if (typeof references === 'string') references = parseScripture(references).references;
+    if (typeof references === 'string') references = parseScripture(references);
     if (! typeof references === 'array') references = [ references ];
 
     const normalized = [];

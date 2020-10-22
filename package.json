@@ -3,7 +3,9 @@
   "version": "1.0.1",
   "description": "Parser for scripture references",
   "keywords": [
+    "bible",
     "scripture",
+    "scriptures",
     "parser"
   ],
   "homepage": "https://github.com/japhy-/scroll-scripture-parser",
