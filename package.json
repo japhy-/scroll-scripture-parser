@@ -1,15 +1,25 @@
 {
   "name": "scroll-scripture-parser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Parser for scripture references",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "scripture",
     "parser"
   ],
-  "author": "Jeffrey 'japhy' Pinyan",
-  "license": "ISC"
+  "homepage": "https://github.com/japhy-/scroll-scripture-parser",
+  "bugs": {
+    "url": "https://github.com/japhy-/scroll-scripture-parser/issues",
+    "email": "japhy.734@gmail.com"
+  },
+  "license": "ISC",
+  "author": "Jeffrey 'japhy' Pinyan <japhy.734@gmail.com> (https://www.catholiccrossreference.com/)",
+  "files": ["books.json"],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/japhy-/scroll-scripture-parser"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
