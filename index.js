@@ -1,4 +1,3 @@
-const util = require('util');
 const books = require('./books.json');
 
 const akaToBookId = Object.fromEntries(Array.prototype.concat(...books.map((b, idx) => b.aka.map((a) => [ a, idx ] ))));
