@@ -133,8 +133,14 @@ const normalizeScripture = (references) => {
     return [ references, normalized ];
 };
 
+const getBooks = () => books;
+
 const getBookById = (id) => books[id];
 
 const getBookByName = (aka) => books[akaToBookId[aka.toLowerCase()]];
 
-exports = { rangeFormat, rangeToReference, parseScripture, normalizeScripture, getBookById, getBookByName };
+exports = {
+    parseScripture, normalizeScripture,
+    rangeFormat, rangeToReference,
+    getBooks, getBookById, getBookByName,
+};
