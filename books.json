@@ -1,0 +1,379 @@
+[
+    {
+        "name": "Genesis",
+        "aka": ["gen","gene","genes","genesis","gn"],
+        "groups": ["ot","pen"]
+    },
+    {
+        "name": "Exodus",
+        "aka": ["ex","exo","exod","exodus"],
+        "groups": ["ot","pen"]
+    },
+    {
+        "name": "Leviticus",
+        "aka": ["lev","levi","levit","leviticus","lv"],
+        "groups": ["ot","pen"]
+    },
+    {
+        "name": "Numbers",
+        "aka": ["nm","nu","num","numb","numbers","numeri"],
+        "groups": ["ot","pen"]
+    },
+    {
+        "name": "Deuteronomy",
+        "aka": ["deut","deuteronomi","deuteronomy","dt"],
+        "groups": ["ot","pen"]
+    },
+    {
+        "name": "Joshua",
+        "aka": ["iosue","jos","josh","joshua"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "Judges",
+        "aka": ["iudicum","jgs","judg","judges"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "Ruth",
+        "aka": ["ru","ruth"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "1 Samuel",
+        "aka": ["1 sam","1 samuel","1sam","1samuel","1samuelis","1sm","isam"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "2 Samuel",
+        "aka": ["2 sam","2 samuel","2sam","2samuel","2samuelis","2sm","iisam"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "1 Kings",
+        "aka": ["1 kgs","1 kings","1kg","1kgs","1kings","1regum","ikgs"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "2 Kings",
+        "aka": ["2 kgs","2 kings","2kg","2kgs","2kings","2regum","iikgs"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "1 Chronicles",
+        "aka": ["1 chr","1 chronicles","1chr","1chron","1chronicles","1paralipomenon","ichr"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "2 Chronicles",
+        "aka": ["2 chr","2 chronicles","2chr","2chron","2chronicles","2paralipomenon","iichr"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "Ezra",
+        "aka": ["esdrae","ezr","ezra"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "Nehemiah",
+        "aka": ["neh","nehe","nehemiae","nehemiah"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "Tobit",
+        "aka": ["tb","thobis","tob","tobi","tobit"],
+        "groups": ["ot","chr"],
+        "deutero": true
+    },
+    {
+        "name": "Judith",
+        "aka": ["iudith","jdt","jdth","jud","judi","judith"],
+        "groups": ["ot","chr"],
+        "deutero": true
+    },
+    {
+        "name": "Esther",
+        "aka": ["est","esth","esther"],
+        "groups": ["ot","chr"]
+    },
+    {
+        "name": "1 Maccabees",
+        "aka": ["1 macc","1 maccabees","1mac","1macc","1maccab","1maccabaeorum","1maccabees","1mc","imacc","imaccab"],
+        "groups": ["ot","chr"],
+        "deutero": true
+    },
+    {
+        "name": "2 Maccabees",
+        "aka": ["2 macc","2 maccabees","2mac","2macc","2maccab","2maccabaeorum","2maccabees","2mc","iimacc","iimaccab"],
+        "groups": ["ot","chr"],
+        "deutero": true
+    },
+    {
+        "name": "Job",
+        "aka": ["bjob","iob","jb","job"],
+        "groups": ["ot","wis"]
+    },
+    {
+        "name": "Psalms",
+        "aka": ["ps","psa","psal","psalm","psalmorum","psalms","pss"],
+        "groups": ["ot","wis"]
+    },
+    {
+        "name": "Proverbs",
+        "aka": ["prov","proverbiorum","proverbs","prv"],
+        "groups": ["ot","wis"]
+    },
+    {
+        "name": "Ecclesiastes",
+        "aka": ["ecc","eccl","eccles","ecclesiastes"],
+        "groups": ["ot","wis"]
+    },
+    {
+        "name": "Song of Songs",
+        "aka": ["cant","canticorum","sg","song","song of songs","songs"],
+        "groups": ["ot","wis"]
+    },
+    {
+        "name": "Wisdom",
+        "aka": ["sap","sapientiae","solo","wis","wisd","wisdom"],
+        "groups": ["ot","wis"],
+        "deutero": true
+    },
+    {
+        "name": "Sirach",
+        "aka": ["ecclesiasticus","ecclus","sir","sira","sirac","sirach"],
+        "groups": ["ot","wis"],
+        "deutero": true
+    },
+    {
+        "name": "Isaiah",
+        "aka": ["is","isa","isai","isaiae","isaiah"],
+        "groups": ["ot","pro","maj"]
+    },
+    {
+        "name": "Jeremiah",
+        "aka": ["ieremiae","jer","jere","jerem","jeremiah"],
+        "groups": ["ot","pro","maj"]
+    },
+    {
+        "name": "Lamentations",
+        "aka": ["lam","lame","lamentationes","lamentations"],
+        "groups": ["ot","pro","maj"]
+    },
+    {
+        "name": "Baruch",
+        "aka": ["bar","baru","baruc","baruch"],
+        "groups": ["ot","pro","maj"],
+        "deutero": true
+    },
+    {
+        "name": "Ezekiel",
+        "aka": ["ez","ezech","ezechielis","ezek","ezekiel"],
+        "groups": ["ot","pro","maj"]
+    },
+    {
+        "name": "Daniel",
+        "aka": ["dan","dani","daniel","danielis","dn"],
+        "groups": ["ot","pro","maj"]
+    },
+    {
+        "name": "Hosea",
+        "aka": ["hos","hose","hosea","osee"],
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Joel",
+        "aka": ["ioel","jl","joel"],
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Amos",
+        "aka": ["am","amos"],
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Obadiah",
+        "aka": ["abdiae","ob","obad","obadiah"],
+        "oneChapter": true,
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Jonah",
+        "aka": ["ionae","jon","jona","jonah"],
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Micah",
+        "aka": ["mi","mic","mica","micah","mich","michaeae"],
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Nahum",
+        "aka": ["na","nah","nahu","nahum"],
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Habakkuk",
+        "aka": ["hab","haba","habacuc","habak","habakkuk","habb","habbakuk","hb"],
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Zephaniah",
+        "aka": ["soph","sophon","sophoniae","zep","zeph","zephan","zephaniah"],
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Haggai",
+        "aka": ["aggaei","hag","hagg","haggai","hg"],
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Zechariah",
+        "aka": ["zach","zachariae","zec","zech","zechariah"],
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Malachi",
+        "aka": ["mal","mala","malac","malach","malachi","malachiae"],
+        "groups": ["ot","pro","min"]
+    },
+    {
+        "name": "Matthew",
+        "aka": ["gmatthew","mat","matt","matth","matthaeum","matthew","mt"],
+        "groups": ["nt","gos"]
+    },
+    {
+        "name": "Mark",
+        "aka": ["gmark","marcum","mark","mk"],
+        "groups": ["nt","gos"]
+    },
+    {
+        "name": "Luke",
+        "aka": ["gluke","lk","lu","luc","lucam","luk","luke"],
+        "groups": ["nt","gos"]
+    },
+    {
+        "name": "John",
+        "aka": ["gjohn","ioannem","jn","jo","joann","joh","john"],
+        "groups": ["nt","gos"]
+    },
+    {
+        "name": "Acts",
+        "aka": ["ac","acts","apost","apostles","apostolorum"],
+        "groups": ["nt","act"]
+    },
+    {
+        "name": "Romans",
+        "aka": ["ro","rom","roma","romanos","romans"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "1 Corinthians",
+        "aka": ["1 cor","1 corinthians","1cor","1corinthians","1corinthios","1cr","icor"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "2 Corinthians",
+        "aka": ["2 cor","2 corinthians","2cor","2corinthians","2corinthios","2cr","iicor"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "Galatians",
+        "aka": ["gal","gala","galat","galatas","galatians"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "Ephesians",
+        "aka": ["eph","ephe","ephes","ephesians","ephesios"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "Philippians",
+        "aka": ["ph","phi","phil","philip","philipp","philippenses","philippians"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "Colossians",
+        "aka": ["col","colo","colos","coloss","colossenses","colossians"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "1 Thessalonians",
+        "aka": ["1 thes","1 thess","1 thessalonians","1th","1the","1thes","1thess","1thessalonians","1thessalonicenses","ithess"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "2 Thessalonians",
+        "aka": ["2 thes","2 thess","2 thessalonians","2th","2the","2thes","2thess","2thessalonians","2thessalonicenses","iithess"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "1 Timothy",
+        "aka": ["1 tim","1 timothy","1tim","1timotheum","1timothy","1tm","itim"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "2 Timothy",
+        "aka": ["2 tim","2 timothy","2tim","2timotheum","2timothy","2tm","iitim"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "Titus",
+        "aka": ["ti","tit","titu","titum","titus"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "Philemon",
+        "aka": ["philem","philemon","philemonem","phlm"],
+        "oneChapter": true,
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "Hebrews",
+        "aka": ["heb","hebr","hebraeos","hebrew","hebrews"],
+        "groups": ["nt","epi","paul"]
+    },
+    {
+        "name": "James",
+        "aka": ["iacobi","ja","jam","jame","james","jas"],
+        "groups": ["nt","epi","cath"]
+    },
+    {
+        "name": "1 Peter",
+        "aka": ["1 pet","1 peter","1pet","1peter","1petri","1pt","ipet"],
+        "groups": ["nt","epi","cath"]
+    },
+    {
+        "name": "2 Peter",
+        "aka": ["2 pet","2 peter","2pet","2peter","2petri","2pt","iipet"],
+        "groups": ["nt","epi","cath"]
+    },
+    {
+        "name": "1 John",
+        "aka": ["1 jn","1 john","1ioannis","1jn","1jo","1joh","1john","ijohn"],
+        "groups": ["nt","epi","cath"]
+    },
+    {
+        "name": "2 John",
+        "aka": ["2 jn","2 john","2ioannis","2jn","2jo","2joh","2john","iijohn"],
+        "oneChapter": true,
+        "groups": ["nt","epi","cath"]
+    },
+    {
+        "name": "3 John",
+        "aka": ["3 jn","3 john","3ioannis","3jn","3jo","3joh","3john","iiijohn"],
+        "oneChapter": true,
+        "groups": ["nt","epi","cath"]
+    },
+    {
+        "name": "Jude",
+        "aka": ["iudae","jd","ju","jud","jude"],
+        "oneChapter": true,
+        "groups": ["nt","epi","cath"]
+    },
+    {
+        "name": "Revelation",
+        "aka": ["apo","apoc","apocalypsis","rev","reve","revel","revelation","rv"],
+        "groups": ["nt","rev"]
+    }
+]

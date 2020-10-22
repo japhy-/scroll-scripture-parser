@@ -1,0 +1,15 @@
+{
+  "name": "scroll-scripture-parser",
+  "version": "1.0.0",
+  "description": "Parser for scripture references",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scripture",
+    "parser"
+  ],
+  "author": "Jeffrey 'japhy' Pinyan",
+  "license": "ISC"
+}
