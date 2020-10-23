@@ -139,7 +139,7 @@ const getBookById = (id) => books[id];
 
 const getBookByName = (aka) => books[akaToBookId[aka.toLowerCase()]];
 
-exports = {
+module.exports = {
     parseScripture, normalizeScripture,
     rangeFormat, rangeToReference,
     getBooks, getBookById, getBookByName,
