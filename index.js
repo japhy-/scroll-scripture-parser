@@ -15,15 +15,13 @@ const ScriptureReference = class {
     }
 }
 
-const rangeFormat = (book, ch, v) => parseInt(v) + (parseInt(ch) << 8) + ((Number.isInteger(book) ? book : akaToBookId[book]) << 16);
+const encodeReference = (book, ch, v) => parseInt(v) + (parseInt(ch) << 8) + ((Number.isInteger(book) ? book : akaToBookId[book]) << 16);
 
-const rangeToReference = (range) => {
-    const verse = range & 255;
-    const chapter = (range >> 8) & 255;
-    const bookId = (range >> 16);
-
-    return [ books[bookId], chapter, verse ];
-};
+const decodeReference = (ref) => ({
+    book: books[(parseInt(ref) >> 16)].name,
+    chapter: (parseInt(ref) >> 8) & 255,
+    verse: parseInt(ref) & 255,
+});
 
 const parseScripture = (input) => {
     rx.lastIndex = 0;
@@ -51,11 +49,11 @@ const parseScripture = (input) => {
                 parts.push(oneChapter ? {
                     type: 'cv-v',
                     parameters: { book, from: [ 1, parseInt(chs[0]), '' ], to: [ 1, parseInt(chs[chs.length-1]), '' ] },
-                    range: [ rangeFormat(bookId, 1, chs[0]), rangeFormat(bookId, 1, chs[chs.length-1]) ],
+                    range: [ encodeReference(bookId, 1, chs[0]), encodeReference(bookId, 1, chs[chs.length-1]) ],
                 } : {
                     type: 'c-c',
                     parameters: { book, from: [ parseInt(chs[0]), '', '' ], to: [ parseInt(chs[chs.length-1]), '', '' ] },
-                    range: [ rangeFormat(bookId, chs[0], 0), rangeFormat(bookId, chs[chs.length-1], 255) ],
+                    range: [ encodeReference(bookId, chs[0], 0), encodeReference(bookId, chs[chs.length-1], 255) ],
                 });
             });
         }
@@ -64,7 +62,7 @@ const parseScripture = (input) => {
             parts.push({
                 type: 'cv-cv',
                 parameters: { book, from: [ parseInt(from[0]), parseInt(from[1]), from[2] || '' ], to: [ parseInt(to[0]), parseInt(to[1]), to[2] || '' ] },
-                range: [ rangeFormat(bookId, from[0], from[1]), rangeFormat(bookId, to[0], to[1]) ],
+                range: [ encodeReference(bookId, from[0], from[1]), encodeReference(bookId, to[0], to[1]) ],
             });
         }
         else if (ch_vs) {
@@ -75,7 +73,7 @@ const parseScripture = (input) => {
                 parts.push({
                     type: 'cv-v',
                     parameters: { book, from: [ parseInt(chapter), parseInt(v1[0]), v1[1] || '' ], to: [ parseInt(chapter), parseInt(v2[0]), v2[1] || '' ] },
-                    range: [ rangeFormat(bookId, chapter, v1[0]), rangeFormat(bookId, chapter, v2[0]) ],
+                    range: [ encodeReference(bookId, chapter, v1[0]), encodeReference(bookId, chapter, v2[0]) ],
                 });
             });
         }
@@ -130,7 +128,7 @@ const normalizeScripture = (references) => {
         last = ref;
     });
 
-    return [ references, normalized ];
+    return { references, normalized };
 };
 
 const getBooks = () => books;
@@ -141,6 +139,6 @@ const getBookByName = (aka) => books[akaToBookId[aka.toLowerCase()]];
 
 module.exports = {
     parseScripture, normalizeScripture,
-    rangeFormat, rangeToReference,
+    encodeReference, decodeReference,
     getBooks, getBookById, getBookByName,
 };
