@@ -7,7 +7,7 @@ const chchRx = new RegExp (`\\d+(?!\\s*:)(?:\\s*[–—-]\\s*\\d+)?(?:\\s*[;,]\\
 const chvchvRx = /\d+\s*:\s*\d+[a-f]?\s*[–—-]\s*\d+\s*:\s*\d+[a-f]?/i;
 const chvRx = new RegExp (`\\d+\\s*:\\s*\\d+[a-f]?(?:\\s*[–—-]\\s*\\d+[a-f]?)?(?:\\s*,\\s*(?!${bookRx.source})\\d+(?!\\s*:)[a-f]?(?:\\s*[–—-]\\s*\\d+(?!\\s*:)[a-f]?)?)*`, 'i');
 
-const rx = new RegExp (`(${bookRx.source})|(${chchRx.source})|(${chvchvRx.source})|(${chvRx.source})`, 'ig');
+const rx = new RegExp (`(${bookRx.source})(?:\s*(?:[;,]|$))|(${bookRx.source})|(${chchRx.source})|(${chvchvRx.source})|(${chvRx.source})`, 'ig');
 
 const ScriptureReference = class {
     constructor (obj) {
@@ -32,10 +32,17 @@ const parseScripture = (input) => {
     let match, bookId;
 
     while (rx.lastIndex < len && (match = rx.exec(input))) {
-        const [, bk, ch_ch, ch_v_ch_v, ch_vs ] = match;
+        const [, bkOnly, bk, ch_ch, ch_v_ch_v, ch_vs ] = match;
 
-        if (bk !== undefined) {
-            bookId = akaToBookId[bk.toLowerCase()];
+        if (bkOnly !== undefined || bk !== undefined) {
+            bookId = akaToBookId[(bkOnly || bk).toLowerCase()];
+            if (bkOnly !== undefined) {
+                parts.push({
+                    type: 'b',
+                    parameters: { book: books[bookId].name, from: [ 0, 0, '' ], to: [ 255, 255, '' ] },
+                    range: [ encodeReference(bookId, 0, 0), encodeReference(bookId, 255, 255) ],
+                });    
+            }
             continue;
         }
         if (bookId === undefined) continue;
