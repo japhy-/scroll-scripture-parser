@@ -1,8 +1,8 @@
 const books = require('./books.json');
 
-const akaToBookId = Object.fromEntries(Array.prototype.concat(...books.map((b, idx) => b.aka.map((a) => [ a, idx ] ))));
+const akaToBookId = Object.fromEntries([].concat(...books.map((b, idx) => b.aka.map((a) => [ a, idx ] ))));
 
-const bookRx = new RegExp (`\\b(?:${Array.prototype.concat(...books.map((b) => b.aka)).sort((a, b) => b.length - a.length).join('|')})\\b`, 'i');
+const bookRx = new RegExp (`\\b(?:${[].concat(...books.map((b) => b.aka)).sort((a, b) => b.length - a.length).join('|')})\\b`, 'i');
 const chchRx = new RegExp (`\\d+(?!\\s*:)(?:\\s*[–—-]\\s*\\d+)?(?:\\s*[;,]\\s*(?!${bookRx.source})\\d+(?!\\s*:)(?:\\s*[–—-]\\s*\\d+)?)*`, 'i');
 const chvchvRx = /\d+\s*:\s*\d+[a-f]?\s*[–—-]\s*\d+\s*:\s*\d+[a-f]?/i;
 const chvRx = new RegExp (`\\d+\\s*:\\s*\\d+[a-f]?(?:\\s*[–—-]\\s*\\d+[a-f]?)?(?:\\s*,\\s*(?!${bookRx.source})\\d+(?!\\s*:)[a-f]?(?:\\s*[–—-]\\s*\\d+(?!\\s*:)[a-f]?)?)*`, 'i');
