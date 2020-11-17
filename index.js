@@ -3,9 +3,9 @@ const books = require('./books.json');
 const akaToBookId = Object.fromEntries([].concat(...books.map((b, idx) => b.aka.map((a) => [ a, idx ] ))));
 
 const bookRx = new RegExp (`\\b(?:${[].concat(...books.map((b) => b.aka)).sort((a, b) => b.length - a.length).join('|')})\\b`, 'i');
-const chchRx = new RegExp (`\\d+(?!\\s*:)(?:\\s*[–—-]\\s*\\d+)?(?:\\s*[;,]\\s*(?!${bookRx.source})\\d+(?!\\s*:)(?:\\s*[–—-]\\s*\\d+)?)*`, 'i');
+const chchRx = new RegExp (`\\d+(?!\\d|\\s*:)(?:\\s*[–—-]\\s*\\d+)?(?:\\s*[;,]\\s*(?!${bookRx.source})\\d+(?!\\d|\\s*:)(?:\\s*[–—-]\\s*\\d+)?)*`, 'i');
 const chvchvRx = /\d+\s*:\s*\d+[a-f]?\s*[–—-]\s*\d+\s*:\s*\d+[a-f]?/i;
-const chvRx = new RegExp (`\\d+\\s*:\\s*\\d+[a-f]?(?:\\s*[–—-]\\s*\\d+[a-f]?)?(?:\\s*,\\s*(?!${bookRx.source})\\d+(?!\\s*:)[a-f]?(?:\\s*[–—-]\\s*\\d+(?!\\s*:)[a-f]?)?)*`, 'i');
+const chvRx = new RegExp (`\\d+\\s*:\\s*\\d+[a-f]?(?:\\s*[–—-]\\s*\\d+[a-f]?)?(?:\\s*,\\s*(?!${bookRx.source})\\d+(?!\d|\\s*:)[a-f]?(?:\\s*[–—-]\\s*\\d+(?!\\s*:)[a-f]?)?)*`, 'i');
 
 const rx = new RegExp (`(${bookRx.source})(?:\s*(?:[;,]|$))|(${bookRx.source})|(${chchRx.source})|(${chvchvRx.source})|(${chvRx.source})`, 'ig');
 
