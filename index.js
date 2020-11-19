@@ -39,7 +39,7 @@ const parseScripture = (input) => {
             if (bkOnly !== undefined) {
                 parts.push({
                     type: 'b',
-                    parameters: { book: books[bookId].name, from: [ 0, 0, '' ], to: [ 255, 255, '' ] },
+                    parameters: { book: books[bookId].name, from: [ '', '', '' ], to: [ '', '', '' ] },
                     range: [ encodeReference(bookId, 0, 0), encodeReference(bookId, 255, 255) ],
                 });    
             }
@@ -89,17 +89,18 @@ const parseScripture = (input) => {
     return parts.map((p) => new ScriptureReference (p));
 };
 
-const normalizeScripture = (references) => {
-    if (typeof references === 'string') references = parseScripture(references);
-    if (! typeof references === 'array') references = [ references ];
+const normalizeScripture = (refs, multi=false) => {
+    if (typeof refs === 'string') refs = parseScripture(refs);
+    if (! typeof refs === 'array') refs = [ refs ];
 
     const normalized = [];
+    const references = [];
     let last;
 
-    references.forEach((ref) => {
+    refs.forEach((ref) => {
         if (!ref.constructor || ref.constructor.name !== 'ScriptureReference') throw `${ref} is not a ScriptureReference`;
         const { book, from, to } = ref.parameters;
-        let norm = from[0] + (from[1] && `:${from[1]}${from[2]}`);
+        let norm = from[0] ? ' ' + from[0] + (from[1] && `:${from[1]}${from[2]}`) : '';
 
         // if the chapter is different
         if (to[0] !== from[0]) {
@@ -116,7 +117,7 @@ const normalizeScripture = (references) => {
             norm += `-${to[2]}`;
         }
 
-        if (last && last.parameters.book === book) {
+        if (!multi && last && last.parameters.book === book) {
             const sep = last.type === ref.type ? ',' : ';';
 
             // single chapter, and same chapter as previous reference
@@ -127,15 +128,17 @@ const normalizeScripture = (references) => {
                 else norm += `-${to[1]}${to[2]}`;
             }
 
-            normalized[normalized.length-1] += `${sep} ${norm}`;
+            normalized[normalized.length-1] += sep + norm;
+            references[normalized.length-1].push(ref);
         }
         else {
-            normalized.push(`${book} ${norm}`);
+            normalized.push(book + norm);
+            references.push([ref]);
         }
         last = ref;
     });
 
-    return { references, normalized };
+    return { normalized, references };
 };
 
 const getBooks = () => books;
